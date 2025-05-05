@@ -2,7 +2,7 @@
   import { env } from "$env/dynamic/public";
 
   const clientId = env.PUBLIC_VITE_STRAVA_CLIENT_ID;
-  const redirectUri = env.PUBLIC_VITE_REDIRECT_URI;
+  const redirectUri = window.location.href + "/callback";
 
   const scopes = "read,activity:read";
 
