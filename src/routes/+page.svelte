@@ -1,8 +1,10 @@
 <script lang="ts">
   const clientId = import.meta.env.VITE_STRAVA_CLIENT_ID;
-  const redirectUri = encodeURIComponent(import.meta.env.VITE_REDIRECT_URI || '');
+  const redirectUri = encodeURIComponent(
+    import.meta.env.VITE_REDIRECT_URI || ""
+  );
   const scopes = "read,activity:read";
-  
+
   function connectStrava() {
     const authUrl = `https://www.strava.com/oauth/authorize?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&approval_prompt=auto&scope=${scopes}`;
     window.location.href = authUrl;
@@ -35,7 +37,7 @@
   button {
     padding: 0.75rem 1.5rem;
     font-size: 1.2rem;
-    background-color: #FC4C02;
+    background-color: #fc4c02;
     color: white;
     border: none;
     border-radius: 4px;
@@ -44,6 +46,6 @@
   }
 
   button:hover {
-    background-color: #E34402;
+    background-color: #e34402;
   }
 </style>

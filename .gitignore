@@ -1,1 +1,8 @@
 node_modules
+.svelte-kit
+
+.env
+*.local
+
+*.log
+DS_Store
