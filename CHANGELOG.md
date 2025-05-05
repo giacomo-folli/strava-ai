@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### 🚀 Features
+
+- Refactor Strava integration to use dynamic environment variables and improve code structure
+
 ### ⚙️ Miscellaneous Tasks
 
 - Update .gitignore and tag to version
