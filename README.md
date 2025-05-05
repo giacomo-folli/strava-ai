@@ -1,7 +1,3 @@
-Here’s a detailed **development guide** for an AI builder like **[bolt.new](https://bolt.new)** to create a **frontend web interface** that enables users to connect their **Strava account** to your **n8n workflow**, using OAuth2.
-
----
-
 # 🛠 Guide: Build a Frontend for Strava OAuth Connection
 
 ## 🎯 Objective
