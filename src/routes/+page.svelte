@@ -1,12 +1,13 @@
 <script lang="ts">
   import { env } from "$env/dynamic/public";
-
-  const clientId = env.PUBLIC_VITE_STRAVA_CLIENT_ID;
-  const redirectUri = window.location.href + "/callback";
+  import { onMount } from "svelte";
 
   const scopes = "read,activity:read";
 
   function connectStrava() {
+    const clientId = env.PUBLIC_VITE_STRAVA_CLIENT_ID;
+    const redirectUri = `${window.location.href}callback`;
+
     const queryParams = new URLSearchParams({
       client_id: clientId,
       response_type: "code",
