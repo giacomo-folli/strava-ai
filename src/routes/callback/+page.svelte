@@ -34,26 +34,4 @@
   });
 </script>
 
-<svelte:head>
-  <title>Strava Connected</title>
-</svelte:head>
-
-<main class="container">
-  <h1>{status}</h1>
-</main>
-
-<style>
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    font-family: system-ui, sans-serif;
-  }
-
-  h1 {
-    text-align: center;
-    max-width: 600px;
-    padding: 0 1rem;
-  }
-</style>
+<h1>{status}</h1>

@@ -11,41 +11,5 @@
   }
 </script>
 
-<svelte:head>
-  <title>Connect Strava</title>
-</svelte:head>
-
-<main class="container">
-  <h1>Connect Your Strava Account</h1>
-  <button on:click={connectStrava}>Connect with Strava</button>
-</main>
-
-<style>
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    font-family: system-ui, sans-serif;
-  }
-
-  h1 {
-    margin-bottom: 2rem;
-  }
-
-  button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.2rem;
-    background-color: #fc4c02;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-
-  button:hover {
-    background-color: #e34402;
-  }
-</style>
+<h1>Connect Your Strava Account</h1>
+<button on:click={connectStrava}>Connect with Strava</button>
