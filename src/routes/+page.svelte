@@ -1,12 +1,22 @@
 <script lang="ts">
-  const clientId = import.meta.env.VITE_STRAVA_CLIENT_ID;
-  const redirectUri = encodeURIComponent(
-    import.meta.env.VITE_REDIRECT_URI || ""
-  );
+  import { env } from "$env/dynamic/public";
+
+  const clientId = env.PUBLIC_VITE_STRAVA_CLIENT_ID;
+  const redirectUri = env.PUBLIC_VITE_REDIRECT_URI;
+
   const scopes = "read,activity:read";
 
   function connectStrava() {
-    const authUrl = `https://www.strava.com/oauth/authorize?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&approval_prompt=auto&scope=${scopes}`;
+    const queryParams = new URLSearchParams({
+      client_id: clientId,
+      response_type: "code",
+      redirect_uri: redirectUri,
+      approval_prompt: "auto",
+      scope: scopes,
+    });
+
+    const authUrl = `https://www.strava.com/oauth/authorize?${queryParams.toString()}`;
+
     window.location.href = authUrl;
   }
 </script>
