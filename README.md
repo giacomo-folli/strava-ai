@@ -1,66 +1,30 @@
-# 🛠 Guide: Build a Frontend for Strava OAuth Connection
+# Strava OAuth Connection
 
-## 🎯 Objective
+A SvelteKit application that handles Strava OAuth2 authentication and forwards the authorization code to an n8n webhook.
 
-Create a simple web frontend that:
+## Setup
 
-- Allows users to **connect their Strava account** via OAuth2.
-- Redirects users to a **Strava OAuth page**.
-- Handles the **OAuth callback** by forwarding the `code` to an `n8n` webhook.
-- Provides **basic user feedback** after connecting.
-- (Optional) Can be hosted as a single static page (e.g., via Netlify, Vercel, GitHub Pages).
+1. Copy `.env.example` to `.env`
+2. Update the environment variables in `.env`:
+   - `VITE_STRAVA_CLIENT_ID`: Your Strava API client ID
+   - `VITE_REDIRECT_URI`: Your callback URL (e.g., https://your-domain.com/callback)
+   - `VITE_N8N_WEBHOOK_URL`: Your n8n webhook URL
 
----
+## Development
 
-## 📋 Requirements
+```bash
+npm install
+npm run dev
+```
 
-- **Single-page UI** (HTML + JS)
-- **"Connect with Strava"** button
-- Dynamic redirection to the Strava OAuth URL
-- Handling of the OAuth **callback** from Strava (`code`)
-- Forwarding the `code` to your `n8n` webhook for token exchange
-- Displaying a **success or failure message** to the user
+## Build
 
----
+```bash
+npm run build
+```
 
-## 🔐 Strava OAuth Info (You provide to bolt.new)
+## Deploy
 
-- `STRAVA_CLIENT_ID`: from Strava API settings
-- `REDIRECT_URI`: something like `https://yourdomain.com/callback.html`
-- `SCOPES`: `read,activity:read`
-- `n8n_WEBHOOK_CALLBACK_URL`: something like `https://n8n.yourdomain.com/webhook/strava-callback`
+This application can be deployed to any static hosting service that supports SvelteKit applications (Netlify, Vercel, etc.).
 
----
-
-## ✅ Step-by-Step Tasks for bolt.new
-
----
-
-### 1. **Landing Page (index.html)**
-
-**Purpose**: Contains a button that sends the user to the Strava OAuth page.
-
----
-
-### 2. **Callback Page (callback.html)**
-
-**Purpose**: Handles the OAuth `code`, then sends it to your `n8n` webhook.
-
----
-
-## 🧠 Notes for bolt.new
-
-- Use environment variables or configuration flags for `STRAVA_CLIENT_ID`, `REDIRECT_URI`, and `n8n` endpoint.
-- This frontend is static and deployable on Netlify, Vercel, or any CDN.
-- All logic happens client-side — the token exchange is handled server-side by **n8n**, keeping credentials secure.
-
----
-
-## 📦 Deliverables
-
-- `index.html`: Main connection page
-- `callback.html`: OAuth2 code handler and forwarder
-- `style.css` (optional): Basic styling
-- `README.md`: Instructions for deploying and configuring environment values
-
----
+Make sure to configure the environment variables in your hosting provider's dashboard.
