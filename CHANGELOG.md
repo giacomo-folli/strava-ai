@@ -2,11 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [0.0.2] - 2025-05-05
 
 ### 🚀 Features
 
 - Refactor Strava integration to use dynamic environment variables and improve code structure
+
+### 🐛 Bug Fixes
+
+- Update redirect URI to use window location for Strava authentication
 
 ### ⚙️ Miscellaneous Tasks
 
