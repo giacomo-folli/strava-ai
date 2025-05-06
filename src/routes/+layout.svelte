@@ -8,11 +8,16 @@
 
 <main class="container">
   <slot />
+
+  <div class="logo">
+    <img width="100px" src="/api_logo_cpt.png" alt="api-logo" />
+  </div>
 </main>
 
 <style>
   .container {
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -20,25 +25,16 @@
     font-family: system-ui, sans-serif;
   }
 
+  .logo {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+  }
+
   :global(h1) {
     margin-bottom: 2rem;
     text-align: center;
     max-width: 600px;
     padding: 0 1rem;
-  }
-
-  :global(button) {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.2rem;
-    background-color: #fc4c02;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-
-  :global(button:hover) {
-    background-color: #e34402;
   }
 </style>

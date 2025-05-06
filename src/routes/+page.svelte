@@ -60,9 +60,30 @@
   </p>
 </div>
 
-<button on:click={connectStrava}>Connect with Strava</button>
+<!-- Connect with Strava -->
+<button class="connect" on:click={connectStrava}>
+  <img
+    width="250px"
+    height="auto"
+    src="/btn_strava_connect.svg"
+    alt="connect"
+    class="connect-img"
+  />
+</button>
 
 <style>
+  .connect-img:hover {
+    cursor: pointer;
+    scale: 1.01;
+  }
+
+  .connect {
+    background-color: transparent;
+    color: transparent;
+    box-shadow: none;
+    border: none;
+  }
+
   .form-group {
     margin-bottom: 2rem;
     width: 100%;

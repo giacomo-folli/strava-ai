@@ -54,3 +54,20 @@
 {#if isDev}
   <button on:click={sendCodeToN8n}>Resend</button>
 {/if}
+
+<style>
+  button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: #fc4c02;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  button:hover {
+    background-color: #e34402;
+  }
+</style>
