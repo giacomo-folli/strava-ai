@@ -5,13 +5,24 @@
   let status = "Processing...";
   let isDev = env.PUBLIC_NODE_ENV == "dev";
 
+  function getEmailFromLocal() {
+    const email = sessionStorage.getItem("user-email");
+    sessionStorage.clear();
+    return email;
+  }
+
   async function sendCodeToN8n() {
     const params = new URLSearchParams(window.location.search);
     const code = params.get("code");
-    const email = params.get("email");
+
+    const email = getEmailFromLocal();
 
     if (!code) {
       status = "Error: Missing authorization code";
+      return;
+    }
+    if (!email) {
+      status = "Error: Missing email in storage";
       return;
     }
 
@@ -37,7 +48,7 @@
   onMount(() => sendCodeToN8n());
 </script>
 
-<a href="/">Go Back</a>
+<a href="/">Try again</a>
 
 <h1>{status}</h1>
 {#if isDev}

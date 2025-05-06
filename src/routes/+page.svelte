@@ -11,23 +11,28 @@
     return re.test(email);
   }
 
+  function storeEmailLocal(email: string) {
+    sessionStorage.setItem("user-email", email);
+  }
+
   function connectStrava() {
     if (!email || !validateEmail(email)) {
       emailError = "Please enter a valid email address";
       return;
     }
 
+    storeEmailLocal(email);
+
     const clientId = env.PUBLIC_VITE_STRAVA_CLIENT_ID;
-    const redirectUri = `${window.location.origin}/callback?email=${email}`;
+    const redirectUri = `${window.location.origin}/callback`;
 
     const queryParams = new URLSearchParams({
       client_id: clientId,
       response_type: "code",
       approval_prompt: "auto",
-      redirect_uri: encodeURIComponent(redirectUri),
+      redirect_uri: redirectUri,
       scope: scopes,
     });
-    // const queryParams = `client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&scope=${scopes}`;
 
     const authUrl = `https://www.strava.com/oauth/authorize?${queryParams.toString()}`;
 
