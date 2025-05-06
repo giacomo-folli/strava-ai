@@ -23,10 +23,11 @@
     const queryParams = new URLSearchParams({
       client_id: clientId,
       response_type: "code",
-      redirect_uri: redirectUri,
       approval_prompt: "auto",
+      redirect_uri: encodeURIComponent(redirectUri),
       scope: scopes,
     });
+    // const queryParams = `client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&scope=${scopes}`;
 
     const authUrl = `https://www.strava.com/oauth/authorize?${queryParams.toString()}`;
 
