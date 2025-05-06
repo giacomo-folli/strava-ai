@@ -2,7 +2,8 @@
   import { env } from "$env/dynamic/public";
   import { onMount } from "svelte";
 
-  const scopes = "read activity:read";
+  // const scopes = "read,activity:read";
+  const scopes = "read";
   let email = "";
   let emailError = "";
 
