@@ -18,7 +18,7 @@
     }
 
     const clientId = env.PUBLIC_VITE_STRAVA_CLIENT_ID;
-    const redirectUri = `${window.location.href}callback?email=${email}`;
+    const redirectUri = `"${window.location.href}callback?email=${email}"`;
 
     const queryParams = new URLSearchParams({
       client_id: clientId,
