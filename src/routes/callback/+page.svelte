@@ -7,6 +7,7 @@
   async function sendCodeToN8n() {
     const params = new URLSearchParams(window.location.search);
     const code = params.get("code");
+    const email = params.get("email");
 
     if (!code) {
       status = "Error: Missing authorization code";
@@ -19,7 +20,7 @@
       const response = await fetch(n8n_uri, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code }),
+        body: JSON.stringify({ code, email }),
       });
 
       if (response.ok) {
