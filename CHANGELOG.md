@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.0] - 2025-05-06
+
+### 🐛 Bug Fixes
+
+- Correct redirect URI formatting in Strava connection flow
+- Encode redirect URI in Strava authorization query parameters
+- Correct redirect URI construction in Strava connection flow
+- Streamline email handling in Strava connection flow
+- Correct scopes formatting in Strava connection flow
+- Update scopes definition in Strava connection flow
+- Update scopes definition in Strava connection flow
+
 ## [0.0.5] - 2025-05-06
 
 ### 🚀 Features
