@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.1] - 2025-05-06
+
+### 🚀 Features
+
+- Enhance Strava connection UI with new button and logo
+
 ## [0.1.0] - 2025-05-06
 
 ### 🐛 Bug Fixes
