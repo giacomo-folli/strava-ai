@@ -3,6 +3,7 @@
   import { env } from "$env/dynamic/public";
 
   let status = "Processing...";
+  let isDev = env.PUBLIC_NODE_ENV == "dev";
 
   async function sendCodeToN8n() {
     const params = new URLSearchParams(window.location.search);
@@ -39,4 +40,6 @@
 <a href="/">Go Back</a>
 
 <h1>{status}</h1>
-<button on:click={sendCodeToN8n}>Resend</button>
+{#if isDev}
+  <button on:click={sendCodeToN8n}>Resend</button>
+{/if}
