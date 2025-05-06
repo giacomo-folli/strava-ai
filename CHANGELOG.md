@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.3] - 2025-05-06
+
+### 🚀 Features
+
+- Add detailed role instructions and expected output structure in AI prompt
+
+### 🚜 Refactor
+
+- Move clientId and redirectUri initialization into connectStrava function
+
 ## [0.0.2] - 2025-05-05
 
 ### 🚀 Features
