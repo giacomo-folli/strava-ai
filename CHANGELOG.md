@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### 🚀 Features
+
+- Enhance coaching prompt with clarity on response expectations
+
 ## [0.0.3] - 2025-05-06
 
 ### 🚀 Features
