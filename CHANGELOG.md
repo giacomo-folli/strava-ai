@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.5] - 2025-05-06
+
+### 🚀 Features
+
+- Conditionally render resend button based on environment
+
 ## [0.0.4] - 2025-05-06
 
 ### 🚀 Features
