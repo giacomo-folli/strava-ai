@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### 🐛 Bug Fixes
+
+- Improve HTML formatting and add missing newline in email template
+- Update email template
+
 ## [0.1.2] - 2025-05-09
 
 ### 🚀 Features
