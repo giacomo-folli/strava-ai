@@ -10,7 +10,7 @@
 <main class="container">
     <slot />
 
-    {#if !page?.route?.id?.includes("review")}
+    {#if !page?.route?.id?.includes("review") && !page?.route?.id?.includes("confirmation")}
         <div class="logo">
             <img width="100px" src="/api_logo_cpt.png" alt="api-logo" />
         </div>
