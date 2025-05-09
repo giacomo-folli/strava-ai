@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### 🚀 Features
+
+- Add confirmation email template
+
 ### 🐛 Bug Fixes
 
 - Improve HTML formatting and add missing newline in email template
