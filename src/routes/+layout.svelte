@@ -1,6 +1,5 @@
 <script lang="ts">
     import { page } from "$app/state";
-    import { onMount } from "svelte";
 </script>
 
 <svelte:head>
@@ -18,20 +17,33 @@
 </main>
 
 <style>
+    :global(*) {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :global(html, body) {
+        height: 100%;
+        overflow: hidden;
+    }
+
     .container {
         display: flex;
         position: relative;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
+        height: 100vh;
         font-family: system-ui, sans-serif;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     .logo {
         position: absolute;
-        bottom: 25px;
-        left: 20px;
+        bottom: 20px;
+        left: 25px;
     }
 
     :global(h1) {

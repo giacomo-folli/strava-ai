@@ -91,6 +91,25 @@
         max-width: 400px;
     }
 
+    .support-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #fc4c02;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: transform 0.2s ease-in-out;
+        z-index: 1000;
+    }
+
     label {
         display: block;
         margin-bottom: 0.5rem;
@@ -124,4 +143,42 @@
         color: #666;
         margin-top: 0.5rem;
     }
+    .support-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #fc4c02;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .support-button:hover {
+        transform: scale(1.1);
+    }
+
+    .support-button svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .support-button:active {
+        transform: scale(0.95);
+    }
+
 </style>
+
+<!-- Support Button -->
+<button class="support-button" on:click={() => window.open('https://github.com/giacomo-folli/strava-ai/issues', '_blank')}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+    </svg>
+</button>
