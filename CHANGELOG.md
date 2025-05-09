@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.2] - 2025-05-09
+
+### 🚀 Features
+
+- Add email template and performance analysis page
+
 ## [0.1.1] - 2025-05-06
 
 ### 🚀 Features
