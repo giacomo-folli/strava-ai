@@ -1,8 +1,10 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { env } from "$env/dynamic/public";
+  import { goto } from "$app/navigation";
 
   let status = "Processing...";
+  let success = false;
   let isDev = env.PUBLIC_NODE_ENV == "dev";
 
   function getEmailFromLocal() {
@@ -19,11 +21,12 @@
 
     if (!code) {
       status = "Error: Missing authorization code";
-      return;
+      await goto("/");
     }
+
     if (!email) {
       status = "Error: Missing email in storage";
-      return;
+      await goto("/");
     }
 
     try {
@@ -36,6 +39,7 @@
       });
 
       if (response.ok) {
+        success = true;
         status = "✅ Strava connected successfully!";
       } else {
         status = "❌ Connection failed. Please try again.";
@@ -48,9 +52,17 @@
   onMount(() => sendCodeToN8n());
 </script>
 
-<a href="/">Try again</a>
+{#if !success}
+  <a href="/">Try again</a>
+{/if}
 
 <h1>{status}</h1>
+<p>
+  Soon you'll start receiving custom training session analysis powered by your
+  AI coach. Stay tuned for personalized insights to help you improve your
+  performance!
+</p>
+
 {#if isDev}
   <button on:click={sendCodeToN8n}>Resend</button>
 {/if}
