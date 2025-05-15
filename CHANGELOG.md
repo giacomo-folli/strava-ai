@@ -7,11 +7,17 @@ All notable changes to this project will be documented in this file.
 ### 🚀 Features
 
 - Add confirmation email template
+- Add support button
 
 ### 🐛 Bug Fixes
 
 - Improve HTML formatting and add missing newline in email template
 - Update email template
+- Update permissions
+
+### 🚜 Refactor
+
+- Improve layout and styling of confirmation and email templates
 
 ## [0.1.2] - 2025-05-09
 
