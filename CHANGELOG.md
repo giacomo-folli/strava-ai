@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [0.1.3] - 2025-05-15
 
 ### 🚀 Features
 
@@ -18,6 +18,10 @@ All notable changes to this project will be documented in this file.
 ### 🚜 Refactor
 
 - Improve layout and styling of confirmation and email templates
+
+### 🎨 Styling
+
+- Format code for improved readability and consistency
 
 ## [0.1.2] - 2025-05-09
 
