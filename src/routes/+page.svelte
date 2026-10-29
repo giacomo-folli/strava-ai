@@ -57,7 +57,7 @@
 		}
 	}
 
-	// onMount(() => walkthroughDialog.showModal());
+	onMount(() => walkthroughDialog.showModal());
 </script>
 
 <svelte:window on:keydown={handleWalkthroughKeydown} />
